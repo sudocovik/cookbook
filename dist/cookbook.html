@@ -8,9 +8,6 @@
   <title>The Kuharica</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -29,10 +26,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -56,6 +59,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -82,9 +89,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -135,20 +143,31 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
@@ -156,7 +175,8 @@
 <p class="author">Mate Nakić</p>
 </header>
 <h1 id="uvod">Uvod</h1>
-<p>Ovo je kuharica moje majke Marine, a recepti u njoj su prikupljani godinama i prenose se iz generacije u generaciju.</p>
+<p>Ovo je kuharica moje majke Marine, a recepti u njoj su prikupljani
+godinama i prenose se iz generacije u generaciju.</p>
 <h1 id="rum-kocke">Rum Kocke</h1>
 <h2 id="tijesto">Tijesto</h2>
 <ul>
@@ -170,10 +190,12 @@
 </ul>
 <h2 id="priprema">Priprema</h2>
 <ol>
-<li><p>Miješaj žutanjke sa šećerom i postupno dodaj ostale sastojke.</p></li>
+<li><p>Miješaj žutanjke sa šećerom i postupno dodaj ostale
+sastojke.</p></li>
 <li><p>Na kraju miješaj snijeg od bjelanjaka.</p></li>
 <li><p>Peci 25 minuta u pećnici zagrijanoj na 180°.</p></li>
-<li><p>Dok je još toplo, posipaj sa 20dag oraha i odmah prelij priređenim sirupom.</p></li>
+<li><p>Dok je još toplo, posipaj sa 20dag oraha i odmah prelij
+priređenim sirupom.</p></li>
 </ol>
 <h2 id="sirup">Sirup</h2>
 <ul>
@@ -205,9 +227,11 @@
 </ul>
 <h2 id="priprema-2">Priprema</h2>
 <ol>
-<li><p>Žumanjke i šećer pjenasto izmiksati, lagano umiješati snijeg od bijelanjaka, orahe, brašno i prašak za pecivo.</p></li>
+<li><p>Žumanjke i šećer pjenasto izmiksati, lagano umiješati snijeg od
+bijelanjaka, orahe, brašno i prašak za pecivo.</p></li>
 <li><p>Peći u nauljenom i papiru obloženom limu na 220°.</p></li>
-<li><p>Pečeno tijesto izvaditi iz lima, skinuti papir za pečenje i ohladiti.</p></li>
+<li><p>Pečeno tijesto izvaditi iz lima, skinuti papir za pečenje i
+ohladiti.</p></li>
 <li><p>Od mlijeka i šećera i gustina skuhati kremu.</p></li>
 <li><p>Kada se krema ohladi dodati margarin.</p></li>
 </ol>
@@ -231,10 +255,12 @@
 </ul>
 <h2 id="priprema-3">Priprema</h2>
 <ol>
-<li><p>Sve sastojke za tijesto izmiskati i podijeliti u 2 dijela.</p></li>
+<li><p>Sve sastojke za tijesto izmiskati i podijeliti u 2
+dijela.</p></li>
 <li><p>U jednu polovicu dodaj kakao i tijesto zapeci.</p></li>
 <li><p>U među vremenu pripremi kremu.</p></li>
-<li><p>Kad je prva polovica zapečena izvadi iz pećnice i prelij preko nje kremu, a po njoj drugo tijesto i sve zajedno ispeci.</p></li>
+<li><p>Kad je prva polovica zapečena izvadi iz pećnice i prelij preko
+nje kremu, a po njoj drugo tijesto i sve zajedno ispeci.</p></li>
 <li><p>Pečeno prelij čokoladom i pospi kokosom.</p></li>
 </ol>
 <h1 id="kolač-od-ananasa">Kolač od ananasa</h1>
@@ -256,11 +282,14 @@
 <h2 id="priprema-4">Priprema</h2>
 <ol>
 <li><p>Bjelanjke istući u čvrsti snijeg.</p></li>
-<li><p>Postupno dodati šećer, vanilini šećer, žumanjke brašno i prašak za pecivo.</p></li>
+<li><p>Postupno dodati šećer, vanilini šećer, žumanjke brašno i prašak
+za pecivo.</p></li>
 <li><p>Gustin i šećer razmutiti s malo soka iz konzerve.</p></li>
 <li><p>Preostali sok staviti kuhati.</p></li>
-<li><p>Kad zakuha uliti razmućeni gustin i stalno miješajući kuhaj dok se ne zgusne.</p></li>
-<li><p>U ohlađeno umiješati sitno sjeckani ananas i i posebno izmješati vrećicu šlaga.</p></li>
+<li><p>Kad zakuha uliti razmućeni gustin i stalno miješajući kuhaj dok
+se ne zgusne.</p></li>
+<li><p>U ohlađeno umiješati sitno sjeckani ananas i i posebno izmješati
+vrećicu šlaga.</p></li>
 <li><p>Ohlađeni biskvit prezati i namazati kremom.</p></li>
 <li><p>Kolač premazati još jednom šlag pjenom i ukrasiti.</p></li>
 </ol>
