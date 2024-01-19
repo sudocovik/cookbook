@@ -1,0 +1,3 @@
+config:
+  gcp:project: cookbook-411620
+  gcp:region: europe-west3
